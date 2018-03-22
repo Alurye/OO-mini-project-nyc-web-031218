@@ -12,6 +12,4 @@ class Allergen
     ALL
   end
 
-
-
 end

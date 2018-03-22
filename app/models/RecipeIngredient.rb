@@ -13,6 +13,4 @@ class RecipeIngredient
    ALL
   end
 
-
-
 end

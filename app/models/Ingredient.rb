@@ -12,18 +12,6 @@ class Ingredient
     ALL
   end
 
-  # def most_common_allergen
-  #     allergy_causing_ings =  self.all.select do |ingredient|
-  #       Allergen.all.ingredient == self
-  #   end
-  #     counter = 0
-  #     max_allergies = nil
-  #     highest_count = 0
-  #     allergy_causing_ings.each do |ingredient|
-  #
-  #     end
-  #
-  # end
   def self.most_common_allergen
     highest_allergen = nil
     highest_allergen_count = 0
@@ -41,5 +29,6 @@ class Ingredient
          end
          highest_allergen
   end
+
 
 end

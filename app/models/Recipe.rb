@@ -15,10 +15,7 @@ class Recipe
   end
 
   def users
-    RecipeCard.all.select do |card|
-      card.recipe = self
-      RecipeCard.user
-    end
+    RecipeCard.all.select{ |card| card.recipe = self }.map{ |card| card.user}.uniq
   end
 
   def self.most_popular
@@ -44,7 +41,6 @@ class Recipe
         @ingredients << ingredient
        recipe_ingredient = RecipeIngredient.new(ingredient, self)
       end
-
   end
 
   def ingredients
