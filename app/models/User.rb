@@ -20,6 +20,7 @@ class User
       @recipes << recipe
       r_card = RecipeCard.new(recipe, date, rating)
       r_card.user = self
+      r_card
       # RecipeCard.recipe
   end
 
@@ -41,6 +42,7 @@ class User
   def declare_allergen(ingredient)
       allergy = Allergen.new(self, ingredient)
       @allergens << allergy
+      allergy
   end
 
   def allergens
